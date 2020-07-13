@@ -1,1 +1,1 @@
-Welcome to noodle info. 
+Welcome to Thai Noodle Kit from the open food database. 

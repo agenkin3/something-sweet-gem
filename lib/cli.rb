@@ -1,4 +1,4 @@
-class CLI #this is user interface
+class CLI 
 
 
     def start
@@ -6,6 +6,3 @@ class CLI #this is user interface
     end
 
 end
-
-
-#make API file - will get data and pass to model class
