@@ -7,35 +7,48 @@ class API
 
     def grab_data
         noodleList = HTTParty.get(BASE_URL)
-        puts "Would you like to see our menu? If yes, type menu"
+        puts "Would you to learn more about our Thai Noodle Kit from the open food database? For ingredients, please type ingredients. For nutrition facts, please type nutrition facts."
+        answer4 = gets.chomp
+        if answer4 == "ingredients"
+            puts noodleList['product']['ingredients_text']
+        puts "\nIf you'd like the full options list, please type options.\n"
         answer1 = gets.chomp
-        if answer1 != "menu"
-            puts "then what"
-        else puts noodleList['product'].keys
-        #product_name = noodleList['product']['product_name_en']
+        end
+        if answer4 == "nutrition facts" 
+            puts nutrient_levels = noodleList ['product']['nutrient_levels']
+            puts "If you'd like the full options list, please type options."
+            answer1 = gets.chomp
+        end  
+        if answer1 != "options"
+            puts "No more noodle facts for you then. \n"
+            grab_data
+            else puts noodleList['product'].keys
+            puts "Please choose from the options above ^"
+            end
+        answer2 = gets.chomp
+        answer_response = noodleList['product'][answer2]
+        puts answer_response 
+        puts "Thanks for using our Thai Noodle Kit database." 
+    end
+
+    
+end
+
+
+#notes
+    # def parse_response()
+    #     // do something to my response
+
+
+#product_name = noodleList['product']['product_name_en']
         #ingredients = noodleList['product']['ingredients_text']
         #nutrient_levels = noodleList ['product']['nutrient_levels']
         #puts noodleList['product'].keys
         #this prints the entire list of options
-        end
-        answer2 = gets.chomp
-        answer_response = noodleList['product'][answer2]
-        puts answer_response
 
 
 
 
-
-        #puts product_name
-        #puts ingredients
-        #puts nutrient_levels
-    
-        
-    end
-
-    # def parse_response()
-    #     // do something to my response
-end
 
     # def get_city_restaurants(entity_id=664, entity_type="city")
     #   response = HTTParty.get(
@@ -67,3 +80,7 @@ end
 #     end
 #   end
 # end
+
+#puts product_name
+        #puts ingredients
+        #puts nutrient_levels

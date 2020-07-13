@@ -2,7 +2,7 @@ class CLI #this is user interface
 
 
     def start
-        puts "Welcome to Food facts for thai peanut noodles."
+        puts "Welcome to Open Food facts - Thai Noodle Kit."
     end
 
 end
