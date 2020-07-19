@@ -1,3 +1,4 @@
+#all require files go in environment
 #use require to load all gems first   
 
 require "bundler/setup" #tells bundler to search machine for gems from file 

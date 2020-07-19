@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 require_relative '../config/environment'
-CLI.new.start
+require_relative "../lib/cli.rb"
+require_relative "../lib/NoodleFact.rb"
+require_relative "../lib/api.rb"
+
+CLI.new.welcome
 API.new.grab_data
 #start API
+NoodleFact.new
