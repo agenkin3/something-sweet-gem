@@ -6,8 +6,16 @@ class NoodleFact
     attr_accessor :inner_fact
     @@all = [] #class variable
     
-    def initialize(inner_fact_list)
-      @inner_fact = inner_fact_list
+    def initialize(attr_hash)
+      @inner_fact = inner_fact
+      @@all << self
+    end
+
+    def fact_list
+      @fact_list
+    end
+
+    def save
       @@all << self
     end
   
@@ -16,4 +24,3 @@ class NoodleFact
     end
   
 end
-

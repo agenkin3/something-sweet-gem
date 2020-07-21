@@ -76,7 +76,6 @@ class Cat #this is model class
   end
 
 end
-
 #anything with a capital letter (same as main space, same as self) is available everywhere
 #to share with others, create module (same as namespace)
 #gems are available to ruby community at large 
