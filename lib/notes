@@ -28,3 +28,7 @@
     #why would you save as a class and not a variable
     #build object
     #model object would allow information from the model class 
+
+    #noodle_hash.each do |fact|
+            #NoodleFact.new fact
+            #end

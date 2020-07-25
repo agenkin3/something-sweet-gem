@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../config/environment'
 require_relative "../lib/cli.rb"
-require_relative "../lib/NoodleFact.rb"
+require_relative "../lib/frozen_dessert.rb"
 require_relative "../lib/api.rb"
 
 CLI.new.start
-API.grab_data
+
 #start API

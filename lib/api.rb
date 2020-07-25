@@ -2,24 +2,23 @@ require 'pry'
 require_relative "./cli.rb"
 
 class API
-    BASE_URL = 'https://world.openfoodfacts.org/api/v0/product/737628064502.json'
+    BASE_URL = 'https://world.openfoodfacts.org/category/frozen_desserts.json'
     
-    def self.grab_data #why do we have to create objects here 
+    def self.grab_data 
         response = HTTParty.get(BASE_URL)
-        noodle_hash = {
-           ingredients: response['product']['ingredients_ids_debug']
-
-        }
-        puts noodle_hash
-        #noodle_hash.each do |fact|
-            #NoodleFact.new fact
-            #end
+        dessert_products = response["products"]
+        dessert_products.each do | dessert_product|
+            dessert_hash = {
+                name: dessert_product["product_name"],
+                ingredients: dessert_product["ingredients_text"],
+                allergens: dessert_product["allergens"]
+            }
+            FrozenDessert.new(dessert_hash)
         end
-        
+
       end
 
-     def get_list
-     end    
+    end
 
 #should create objects from this data and pass information to model class(NoodleFact)
 # Possibly: Link CLI to get user input (please enter 9 digit food ID)
