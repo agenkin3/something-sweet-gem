@@ -5,9 +5,10 @@ class CLI
         print_menu
     end
 
-    def list_all_options
-        #use class method where you list all 
-    end
+    # def list_all_options
+    #     #use class method where you list all 
+    # end
+
     def welcome
         API.grab_data
         puts "Welcome to Open Food facts - Frozen Desserts."
@@ -47,17 +48,19 @@ class CLI
       end
 
     def dessert_submenu(dessert)
-        puts "Would you like to see ingredients or allergens (type one, or say 'no' to go back)?"
+        puts "Would you like to see ingredients, allergens, or country of origin? (type one of these options or say 'no' to go back)?"
         input = gets.chomp
         if input != 'no'
             if input == "ingredients"
                 puts display(dessert.ingredients)
             elsif input == "allergens"
                 puts display(dessert.allergens)
+            elsif input == 'country of origin'
+                 puts display(dessert.country)
             else
-                puts "Please enter 'ingredients', 'allergens', or 'no'"
+                puts "Please enter 'ingredients', 'country of origin','allergens', or 'no'"
             end
-            puts "Here are your options for #{dessert.name}"
+            puts "Here are your options for #{dessert.name} :"
             dessert_submenu(dessert) 
         else
             print_menu
@@ -65,18 +68,7 @@ class CLI
     
     end
 
-      
-    def goodbye
-        space
-        puts "Thanks for using this app!"
-        space
-    end
 
       
 end
 
-
-#gets information from user
-#running of the show 
-#get the things and turn them into objects
-#all puts and gets statements should live in the CLI class
