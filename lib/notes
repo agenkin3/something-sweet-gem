@@ -32,3 +32,20 @@
     #noodle_hash.each do |fact|
             #NoodleFact.new fact
             #end
+
+              # def goodbye
+    #     space
+    #     puts "Thanks for using this app!"
+    #     space
+    # end
+
+
+#gets information from user
+#running of the show 
+#get the things and turn them into objects
+#all puts and gets statements should live in the CLI class
+
+#API should create objects from this data and pass information to model class(frozen_desserts )
+# Possibly: Link CLI to get user input (please enter 9 digit food ID)
+# save user input as variable, change id in BASE_URL to search different items
+# return the product and ingredients for item that you searched
