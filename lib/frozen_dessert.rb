@@ -2,7 +2,7 @@ require_relative "./cli.rb"
 require_relative"./api.rb"
 
 class FrozenDessert
-    attr_reader :name, :ingredients, :allergens #add another attribute here, a way to see a random desert
+    attr_reader :name, :ingredients, :allergens, :country #add another attribute here, a way to see a random desert
 
     @@all = [] 
     
@@ -10,6 +10,7 @@ class FrozenDessert
       @ingredients = attr_hash[:ingredients]
       @name = attr_hash[:name]
       @allergens = attr_hash[:allergens]
+      @country = attr_hash[:country]
       save #same as self.save
     end
 
