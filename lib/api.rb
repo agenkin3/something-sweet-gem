@@ -11,7 +11,8 @@ class API
             dessert_hash = {
                 name: dessert_product["product_name"],
                 ingredients: dessert_product["ingredients_text"],
-                allergens: dessert_product["allergens"]
+                allergens: dessert_product["allergens_hierarchy"],
+                country: dessert_product["countries_tags"]
             }
             FrozenDessert.new(dessert_hash)
         end
