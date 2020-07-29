@@ -1,8 +1,5 @@
-require_relative "./cli.rb"
-require_relative"./api.rb"
-
 class FrozenDessert
-    attr_reader :name, :ingredients, :allergens, :country #add another attribute here, a way to see a random desert
+    attr_reader :name, :ingredients, :allergens, :country 
 
     @@all = [] 
     

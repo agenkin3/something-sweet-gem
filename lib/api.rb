@@ -1,5 +1,5 @@
-require 'pry'
-require_relative "./cli.rb"
+
+
 
 class API
     BASE_URL = 'https://world.openfoodfacts.org/category/frozen_desserts.json'

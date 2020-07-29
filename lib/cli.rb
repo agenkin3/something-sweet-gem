@@ -16,8 +16,8 @@ class CLI
 
     def print_menu
         @n = FrozenDessert.all.length
-        puts "Please choose from one of the following options (1-#{@n}) or say 'no' to leave:"
-        FrozenDessert.all.each.with_index(1) do |dessert, i|
+        puts "Please choose from one of the following options (1-#{@n}) or say 'no' to leave or 'random' for a random selection:"
+        FrozenDessert.all.each.with_index(1) do |dessert, i| #what does the 1 do?
             puts "(#{i}) #{dessert.name}"
         end
         get_user_input
@@ -33,13 +33,18 @@ class CLI
 
     def get_user_input
         input = gets.chomp
-        if input != 'no'
-            input = input.to_i
+        if input == 'random' 
+           random_choice = (1..20).to_a.sample
+           puts "The random number selected is #{random_choice}!"
+           dessert = FrozenDessert.all[random_choice-1]
+           dessert_submenu(dessert)
+        elsif input != 'no'
+            input = input.to_i #can be entire new method
             if input < 1 || input > @n
-                puts "Please enter a valid number (1-#{@n}) or say 'no' to go back"
+                puts "Please enter a valid number (1-#{@n}) or say 'no' to go back."
                 get_user_input
             else
-                dessert = FrozenDessert.all[input-1]
+                dessert = FrozenDessert.all[input-1]#
                 dessert_submenu(dessert)
             end
         else
