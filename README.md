@@ -1,6 +1,6 @@
-# Project Title
+# Dessert Facts
 
-This project is the Frozen Desert Info Generator - Open Food Database (Formerly known as noodle-info)
+This project is the Frozen Dessert Info Generator - Open Food Database (Formerly known as noodle-info)
 
 ## Description
 
