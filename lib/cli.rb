@@ -11,7 +11,7 @@ class CLI
 
     def welcome
         API.grab_data
-        puts "Welcome to Open Food facts - Frozen Desserts."
+        puts "Welcome to Something Sweet - Open Food facts - Frozen Desserts."
     end
 
     def print_menu
