@@ -1,6 +1,6 @@
-# Sugar CLI Gem 
+# Something Sweet CLI Gem 
 
-Welcome to the Something Sweet CLI Gem. Search Open Food Facts - World, a food products database made by everyone, for everyone. Use it to search the world to find your favorite new dessert and how to make it. 
+Welcome to the Something Sweet CLI Gem. Search Open Food Facts - World, a food products database made by everyone, for everyone, to find your new desert. Use this gem to search the world to find your favorite new dessert and how to make it. 
 
 ## Description
 
